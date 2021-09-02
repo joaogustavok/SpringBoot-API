@@ -1,0 +1,496 @@
+{
+	"info": {
+		"_postman_id": "ef4b21b9-71dd-44b4-a3ef-bd967e0c3880",
+		"name": "DesafioApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Autenticando No Servico",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"diga@gft.com\",\r\n    \"senha\":\"diga\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DesafiosAdicionando",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Desafio Api2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/desafios",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"desafios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DesafiosListando",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/desafios",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"desafios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DesafiosBuscandoPorCodigo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/desafios/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"desafios",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DesafiosDeletando",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/desafios/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"desafios",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DesafiosEditando",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\" : \"Desafio Spring MVC\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/desafios/6",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"desafios",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StartersAdicionando",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJERVNBRklPQVBJIiwic3ViIjoiMSIsImlhdCI6MTYzMDUxNzQ0MCwiZXhwIjoxNjMwNjAzODQwfQ.3vyvqxVqgBuolRGMaRD_vs2i9raGg3nGmA4h2hR8C9Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\" : \"Michaela Jackson\",\r\n    \"email\" : \"mijk@gft.com\",\r\n    \"quatroLetras\" :\"mijk\",\r\n    \"linguagem\" : \"kotlin\",\r\n    \"telefone\" : \"4164885868\",\r\n    \"endereco\" : {\r\n        \"logradouro\" : \"Rua Novo Mundo\",\r\n        \"complemento\" : \"casa\",\r\n        \"numero\" : \"6703\",\r\n        \"bairro\" : \"Jardim Velho\",\r\n        \"cep\" : \"22.321-45\",\r\n        \"cidade\" : \"Quitandinha\",\r\n        \"estado\" : \"Paraná\"\r\n    }\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/starters",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"starters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StartersListando",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJERVNBRklPIEFQSSIsInN1YiI6IjEiLCJpYXQiOjE2MzA0MzE3MzgsImV4cCI6MTYzMDUxODEzOH0.myLoihea2-mBAlO2qPPdREo7Gkho6XUeK0sggR0oOtY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/starters",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"starters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StartersBuscandoPorCodigo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/starters/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"starters",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StartersDeletando",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/starters/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"starters",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StartersEditando",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"nome\": \"Dirceu Garcia\",\r\n    \"email\": \"diga@gft.com\",\r\n    \"quatroLetras\": \"diga\",\r\n    \"linguagem\": \".net e java\",\r\n    \"telefone\": \"41684849693\",\r\n    \"endereco\": {\r\n        \"logradouro\": \"Rua Dto\",\r\n        \"numero\": \"666\",\r\n        \"complemento\": null,\r\n        \"bairro\": \"Jardim Novo\",\r\n        \"cep\": \"22.321-45\",\r\n        \"cidade\": \"Quitandinha\",\r\n        \"estado\": \"Paraná\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/starters/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"starters",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SubmissaoAdicionando",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"starter\" : {\r\n        \"id\" : \"1\"\r\n    },\r\n    \"desafio\":{\r\n        \"id\" :\"1\"\r\n    },\r\n    \"repositorio\": \"Aqui o repositorio\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/submissao",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"submissao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SubmissaoListando",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/submissao",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"submissao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SubmissaoBuscandoPorCodigo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/submissao/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"submissao",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SubmissaoDeletando",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/submissao/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"submissao",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SubmissaoAtualizando",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"starter\" : {\r\n        \"id\" : \"1\"\r\n    },\r\n    \"desafio\":{\r\n        \"id\" :\"1\"\r\n    },\r\n    \"repositorio\": \"Aqui Atualizando o repository\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/submissao/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"submissao",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NotasAdicionando",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"submissao\" : {\r\n        \"id\" : \"2\"\r\n    },\r\n    \"qualidade\" : \"2\",\r\n    \"quantidade\" : \"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/notas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NotasListando",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/notas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NotasBuscandoPorCodigo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/notas/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notas",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NotasDeletando",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/notas/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NotasAtualizando",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"submissao\" : {\r\n        \"id\" : \"3\"\r\n    },\r\n    \"qualidade\" : \"3\",\r\n    \"quantidade\" : \"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/notas/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notas",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
